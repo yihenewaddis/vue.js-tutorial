@@ -1,9 +1,11 @@
 <template>
-    <div class="name" :class="{darkTheme:isDarkTheme}"  @click="close" >
-        addis kassa yallew and the title is {{title}}
+    <div class="name" :class="{darkTheme:isDarkTheme}">
+        <slot>
+
+        </slot>
         <br>
         <div>
-        <button>
+        <button  @click="close" >
             show
         </button>
         </div>
@@ -12,7 +14,7 @@
 </template>
 <script>
 export default{
-    props:['title','isDarkTheme','isVisile','hide'],
+    props:['isDarkTheme','isVisile','hide'],
     methods:{
         close(){
             this.$emit('closes')

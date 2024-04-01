@@ -1,7 +1,9 @@
 <template>
   <div  >
     <div v-if="isVisile">
-      <Yihenew :title = 'title' :isDarkTheme='isDarkTheme' :isVisile='isVisile' @closes ='hide'/>
+      <Yihenew :isDarkTheme='isDarkTheme' :isVisile='isVisile' @closes ='hide'>
+        <h1 class="active">{{title}}</h1>
+      </Yihenew>
     </div>
     <h1>HELLO this is yihenew page</h1>
     <button @click="hide">
@@ -19,7 +21,7 @@
     data(){
         return {
           count: 0,
-          title:'this is yihenew',
+          title:'this is the title from slot',
           isDarkTheme:true,
           isVisile: false
           }
