@@ -1,13 +1,29 @@
 <template>
   <div  >
-    <div v-if="isVisile">
-      <Yihenew :isDarkTheme='isDarkTheme' :isVisile='isVisile' @closes ='hide'>
+    <div v-if="isVisile1">
+      <Yihenew :isDarkTheme='isDarkTheme' :isVisile='isVisile' @closes ='hide("first")'>
         <h1 class="active">{{title}}</h1>
+        <template v-slot:link>
+          <a href="#">first link</a>
+          <a href="#">second link</a>
+        </template>
+      </Yihenew>
+    </div>
+    <div v-if="isVisile2">
+      <Yihenew :isDarkTheme='isDarkTheme' :isVisile='isVisile' @closes ='hide("second")'>
+        <h1 class="active">{{title}}</h1>
+        <template v-slot:link>
+          <a href="#">second link</a>
+          <a href="#">third link</a>
+        </template>
       </Yihenew>
     </div>
     <h1>HELLO this is yihenew page</h1>
     <button @click="hide">
-      hide
+      first Model
+    </button>
+    <button @click="hide">
+      secold Model
     </button>
   </div>
 </template>
@@ -23,12 +39,17 @@
           count: 0,
           title:'this is the title from slot',
           isDarkTheme:true,
-          isVisile: false
+          isVisile1: false,
+          isVisile2: false
           }
     },
     methods:{
-      hide(){
-        this.isVisile = !this.isVisile
+      hide(val){
+        if(val === 'forst'){
+          this.isVisile1 = !this.isVisile1
+        }else{
+            this.isVisile2 = !this.isVisile2
+        }
       }
     }
 }

@@ -3,10 +3,13 @@
         <slot>
 
         </slot>
+        <slot name="link">
+
+        </slot>
         <br>
         <div>
         <button  @click="close" >
-            show
+            hide
         </button>
         </div>
     </div>
