@@ -1,7 +1,7 @@
 <template>
   <div  >
     <div v-if="isVisile">
-      <Yihenew :title = 'title' :isDarkTheme='isDarkTheme' :isVisile='isVisile' @close ='hide'/>
+      <Yihenew :title = 'title' :isDarkTheme='isDarkTheme' :isVisile='isVisile' @closes ='hide'/>
     </div>
     <h1>HELLO this is yihenew page</h1>
     <button @click="hide">

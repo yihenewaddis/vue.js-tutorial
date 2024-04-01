@@ -15,7 +15,7 @@ export default{
     props:['title','isDarkTheme','isVisile','hide'],
     methods:{
         close(){
-            this.$emit('close')
+            this.$emit('closes')
         }
     }
 }
