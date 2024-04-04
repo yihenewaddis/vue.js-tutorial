@@ -13,8 +13,8 @@
       <Yihenew :isDarkTheme='isDarkTheme' :isVisile='isVisile' @closes ='hide("second")'>
         <h1 class="active">{{title}}</h1>
         <template v-slot:link>
-          <a href="#">second link</a>
-          <a href="#">third link</a>
+          <a href="#">second link frome here </a>
+          <a href="#">third link from here </a>
         </template>
       </Yihenew>
     </div>
