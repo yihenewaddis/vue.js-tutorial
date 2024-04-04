@@ -5,7 +5,7 @@ import YihenewVue from './views/YihenewView.vue'
 
 <template>
 <div>
-  this is yihenew addis
+  this is yihenew addis kassa and his pejeact
   <YihenewVue/>
 </div>
   <!-- <header>

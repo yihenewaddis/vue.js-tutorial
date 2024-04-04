@@ -9,7 +9,7 @@
         <br>
         <div>
         <button  @click="close" >
-            hide
+            hide this page
         </button>
         </div>
     </div>
